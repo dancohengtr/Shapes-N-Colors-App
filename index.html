@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Shapesncolors</title>
+    <!-- Include meta tag to ensure proper rendering and touch zooming -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Include jQuery Mobile stylesheets -->
+    <link rel="stylesheet" type="text/css" href="js/jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.css">
+      
+    <!-- Include the Slick Stylesheet -->
+    <link rel="stylesheet" type="text/css" href="js/slick-1.6.0/slick/slick.css">
+    
+    <!-- Include the Slick Themes -->
+    <link rel="stylesheet" type="text/css" href="js/slick-1.6.0/slick/slick-theme.css">
+    
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">  
+
+    <!-- Include the jQuery library -->
+    <script src="js/jquery-1.11.3.js"></script>
+
+    <!-- Include the jQuery Mobile library -->
+    <script src="js/jquery.mobile-1.4.5/jquery.mobile-1.4.5.js"></script>
+    
+    <!-- Include Howler audio library -->  
+    <script src="js/howler.js"></script>
+    
+    <!-- Custom Scripts -->  
+    <script src="js/script.js" type="text/javascript"></script>
+   
+    
+ </head>
+  <body>
+    
+    <!--INTRO SCREEN-->
+    <div data-role="page" id="intro_screen" style="overflow:hidden">
+      <div data-role="main" class="background-format"> 
+        <div class="button_container">     
+          <a href="#learn-intro-screen" data-transition="none" id="learn"  class="main_screen_buttons" onclick="bloop.play()">Learn</a>
+          <a href="#test-intro-screen" data-transition="none" id="test" class="main_screen_buttons" onclick="bloop.play()">Test</a>
+          <a href="#play-screen" data-transition="none" id="play" class="main_screen_buttons" onclick="trueClickability();bloop.play()">Play</a>
+        </div>
+        <div class="tool_buttons_container">
+            <a href="#settings-screen" data-transition="none">
+                <img src="img/settings_icon.png" id="settings" class="tool_buttons" alt="settingsicon" height="50" width="50" onclick="clicky.play()">
+            </a>
+            <a href="#info-screen-popup" data-rel="popup" data-transition="none">
+                <img src="img/information_icon.png" class="tool_buttons" id="info" alt="infoicon" height="50" width="50" onclick="clicky.play()">
+            </a>
+            
+       </div>
+      </div>
+      <div data-role="popup" id="info-screen-popup" class="ui-content" data-transition="slidedown" data-position-to="window">
+        <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn ui-icon-delete ui-btn-icon-notext ui-btn-right" onclick="clicky.play()">Close</a>
+        <form method="post" action="/action_page_post.php">
+          <p style="font-family: DK Cool Crayon;" onclick="click.play()">Choose Whether you'd like to learn, test your knowledge, or play to have some fun!</p>
+        </form>
+      </div>
+      
+    </div>
+    
+    
+      
+      
+      
+      
+      
+      
+    <!-------------------------------------------------------------------------------------------->  
+    <!--LEARN COMPONENTS START-------------------------------------------------------------------->
+    <!-------------------------------------------------------------------------------------------->  
+    <!--LEARN INTRO SCREEN-->
+    <div data-role="page" id="learn-intro-screen">
+      <div data-role="main" class="background-format-2">
+        <div class="head-text-container">
+          <h1 class="head-text">What would you like to learn about?</h1>
+        </div>
+        <div class="button_container">     
+          <a href="#learn-colors-screen" class="main_screen_buttons" data-transition="none" onclick="bloop.play()">Colors</a>
+          <a href="#learn-shapes-screen" class="main_screen_buttons" data-transition="none" onclick="bloop.play()">Shapes</a>
+        </div>
+          <div class="tool_buttons_container">
+            <a href="#settings-screen" data-transition="none">
+                <img src="img/settings_icon.png" id="settings" class="tool_buttons" alt="settingsicon" height="50" width="50" onclick="clicky.play()">
+            </a>
+            <a href="#intro_screen" data-transition="none">
+                <img src="img/back_arrow.png" id="back" class="tool_buttons" alt="backicon" height="50" width="50" onclick="clicky.play()">
+            </a>
+            <a href="#learn-intro-screen-popup" data-rel="popup" data-transition="none">
+                <img src="img/information_icon.png" class="tool_buttons" id="info" alt="infoicon" height="50" width="50" onclick="clicky.play()">
+            </a>
+            
+       </div>
+      <div data-role="popup" id="learn-intro-screen-popup" class="ui-content" data-transition="slidedown" data-position-to="window">
+        <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn ui-icon-delete ui-btn-icon-notext ui-btn-right" onclick="clicky.play()" >Close</a>
+        <form method="post" action="/action_page_post.php">
+          <p style="font-family: DK Cool Crayon;">Choose Whether you'd like to learn about shapes or colors</p>
+        </form>
+      </div>
+      </div>
+    </div>
+    <!--LEARN COLORS SCREEN-->
+    <div data-role="page" id="learn-colors-screen">
+      <div data-role="main" class="background-format-2" id="learn-colors-main">    
+        <div class="svg-carousel-spacing">
+        </div>
+        <h1 class="head-text">Swipe to learn about colors!</h1>
+        <div class="svg-carousel">
+        <div width="100%" style="text-align:center">
+            <svg height="200" width="300px">
+                <circle cx="150" cy="100" r="80" stroke="black" stroke-width="3" fill="red" />
+                <text class="svg-text" x="120" y="110" fill="white">Red</text>
+            </svg>
+         </div>
+         <div width="100%" style="text-align:center">
+            <svg height="200" width="300px">
+                <circle cx="150" cy="100" r="80" stroke="black" stroke-width="3" fill="green" />
+                <text class="svg-text" x="95" y="110" fill="white">Green</text>
+            </svg>
+         </div>
+          <div width="100%" style="text-align:center">
+            <svg height="200" width="300px">
+                <circle cx="150" cy="100" r="80" stroke="black" stroke-width="3" fill="blue" />
+                <text class="svg-text" x="110" y="110" fill="white">Blue</text>
+            </svg>
+         </div>
+        <div width="100%" style="text-align:center">
+            <svg height="200" width="300px">
+                <circle cx="150" cy="100" r="80" stroke="black" stroke-width="3" fill="yellow" />
+                <text class="svg-text" x="90px" y="110" fill="white">Yellow</text>
+            </svg>
+         </div>
+         <div width="100%" style="text-align:center">
+            <svg height="200" width="300px">
+                <circle cx="150" cy="100" r="80" stroke="black" stroke-width="3" fill="purple" />
+                <text class="svg-text" x="95px" y="110" fill="white">Purple</text>
+            </svg>
+         </div>
+          <div width="100%" style="text-align:center">
+            <svg height="200" width="300px">
+                <circle cx="150" cy="100" r="80" stroke="black" stroke-width="3" fill="orange" />
+                <text class="svg-text" x="90px" y="110" fill="white">Orange</text>
+            </svg>
+         </div>
+        <div width="100%" style="text-align:center">
+            <svg height="200" width="300px">
+                <circle cx="150" cy="100" r="80" stroke="black" stroke-width="3" fill="pink" />
+                <text class="svg-text" x="110" y="110" fill="white">Pink</text>
+            </svg>
+         </div>
+         <div width="100%" style="text-align:center">
+            <svg height="200" width="300px">
+                <circle cx="150" cy="100" r="80" stroke="black" stroke-width="3" fill="black" />
+                <text class="svg-text" x="105" y="110" fill="white">Black</text>
+            </svg>
+         </div>
+          <div width="100%" style="text-align:center">
+            <svg height="200" width="300px">
+                <circle cx="150" cy="100" r="80" stroke="black" stroke-width="3" fill="white" />
+                <text class="svg-text" x="95px" y="110" fill="white">White</text>
+            </svg>
+         </div>
+        <div width="100%" style="text-align:center">
+            <svg height="200" width="300px">
+                <circle cx="150" cy="100" r="80" stroke="black" stroke-width="3" fill="gray" />
+                <text class="svg-text" x="105" y="110" fill="white">Gray</text>
+            </svg>
+         </div>    
+        </div>
+        <div class="tool_buttons_container">
+            <a href="#settings-screen" data-transition="none">
+                <img src="img/settings_icon.png" id="settings" class="tool_buttons" alt="settingsicon" height="50" width="50" onclick="clicky.play()">
+            </a>
+            <a href="#learn-intro-screen" data-transition="none">
+                <img src="img/back_arrow.png" id="back" class="tool_buttons" alt="backicon" height="50" width="50" onclick="clicky.play()">
+            </a>
+            <a href="#learn-colors-screen-popup" data-rel="popup" data-transition="none">
+                <img src="img/information_icon.png" class="tool_buttons" id="info" alt="infoicon" height="50" width="50" onclick="clicky.play()">
+            </a>
+            
+       </div>
+      <div data-role="popup" id="learn-colors-screen-popup" class="ui-content" data-transition="slidedown" data-position-to="window">
+        <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn ui-icon-delete ui-btn-icon-notext ui-btn-right" onclick="clicky.play()">Close</a>
+        <form method="post" action="/action_page_post.php">
+          <p style="font-family: DK Cool Crayon;">Swipe right or left to learn about different colors!</p>
+        </form>
+      </div>  
+      </div>    
+    </div>
+    <!--LEARN SHAPES SCREEN-->
+    <div data-role="page" id="learn-shapes-screen">
+      <div data-role="main" class="background-format-2">
+        <div class="svg-carousel-spacing">
+        </div>
+        <h1 class="head-text">Swipe to learn about Shapes!</h1>
+        <div class="svg-carousel">
+        <div width="100%" style="text-align:center">
+            <svg height="200" width="300">
+                <polygon points="30,170 270,170 150,30" style="fill:#4CAF50;stroke:black;stroke-width:3" />
+                <text class="svg-text" x="85" y="150" fill="white">Triangle</text>
+            </svg>
+         </div>
+         <div width="100%" style="text-align:center">
+            <svg height="200" width="300">
+                <circle cx="150" cy="100" r="80" stroke="black" stroke-width="3" fill="#4CAF50" />
+                <text class="svg-text" x="100" y="110" fill="white">Circle</text>
+            </svg>
+         </div>
+          <div width="100%" style="text-align:center">
+            <svg height="200" width="300">
+                <rect width="150" height="150" x="75" y="25" style="fill:#4CAF50;stroke-width:3;stroke:rgb(0,0,0)" />
+                <text class="svg-text" x="90" y="110" fill="white">Square</text>
+            </svg>
+         </div>
+        <div width="100%" style="text-align:center">
+            <svg height="200" width="300">
+                <rect width="250" height="150" x="25" y="25" style="fill:#4CAF50;stroke-width:3;stroke:rgb(0,0,0)" />
+                <text class="svg-text" x="60" y="110" fill="white">Rectangle</text>
+            </svg>
+         </div>    
+      </div>
+      <div class="tool_buttons_container">
+            <a href="#settings-screen" data-transition="none">
+                <img src="img/settings_icon.png" id="settings" class="tool_buttons" alt="settingsicon" height="50" width="50" onclick="clicky.play()">
+            </a>
+            <a href="#learn-intro-screen" data-transition="none">
+                <img src="img/back_arrow.png" id="back" class="tool_buttons" alt="backicon" height="50" width="50" onclick="clicky.play()">
+            </a>
+            <a href="#learn-shapes-screen-popup" data-rel="popup" data-transition="none">
+                <img src="img/information_icon.png" class="tool_buttons" id="info" alt="infoicon" height="50" width="50" onclick="clicky.play()">
+            </a>
+            
+       </div>
+      <div data-role="popup" id="learn-shapes-screen-popup" class="ui-content" data-transition="slidedown" data-position-to="window">
+        <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn ui-icon-delete ui-btn-icon-notext ui-btn-right" onclick="clicky.play()">Close</a>
+        <form method="post" action="/action_page_post.php">
+          <p style="font-family: DK Cool Crayon;">Swipe right or left to learn about different shapes!</p>
+        </form>
+      </div>
+    </div> 
+  </div>
+    <!-------------------------------------------------------------------------------------------->  
+    <!--LEARN COMPONENTS END---------------------------------------------------------------------->
+    <!-------------------------------------------------------------------------------------------->   
+    
+        
+        
+        
+    <!-------------------------------------------------------------------------------------------->  
+    <!--TEST COMPONENTS START--------------------------------------------------------------------->
+    <!-------------------------------------------------------------------------------------------->  
+    <!--TEST INTRO SCREEN-->
+    <div data-role="page" id="test-intro-screen">
+      <div data-role="main" class="background-format-2">
+        <div class="head-text-container">
+          <h1 class="head-text">What would you like to be tested on?</h1>
+        </div>
+        <div class="button_container">     
+          <a href="#test-colors-screen" class="main_screen_buttons" data-transition="none" onclick="bloop.play()">Colors</a>
+          <a href="#test-shapes-screen" class="main_screen_buttons" data-transition="none" onclick="bloop.play()">Shapes</a>
+        </div>
+          <div class="tool_buttons_container">
+            <a href="#settings-screen" data-transition="none">
+                <img src="img/settings_icon.png" id="settings" class="tool_buttons" alt="settingsicon" height="50" width="50" onclick="clicky.play()">
+            </a>
+            <a href="#intro_screen" data-transition="none">
+                <img src="img/back_arrow.png" id="back" class="tool_buttons" alt="backicon" height="50" width="50" onclick="clicky.play()">
+            </a>
+            <a href="#test-screen-popup" data-rel="popup" data-transition="none">
+                <img src="img/information_icon.png" class="tool_buttons" id="info" alt="infoicon" height="50" width="50" onclick="clicky.play()">
+            </a>
+            
+       </div>
+      <div data-role="popup" id="test-screen-popup" class="ui-content" data-transition="slidedown" data-position-to="window">
+        <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn ui-icon-delete ui-btn-icon-notext ui-btn-right" onclick="clicky.play()">Close</a>
+        <form method="post" action="/action_page_post.php">
+          <p style="font-family: DK Cool Crayon;">Choose what you'd like to be tested on!</p>
+        </form>
+      </div>
+      </div>
+    </div>
+    <!--TEST COLORS SCREEN-->
+    <div data-role="page" id="test-colors-screen">
+      <div data-role="main" class="background-format-2" id="test-colors-main">  
+        <!--<div class="svg-carousel-spacing">
+        </div>-->
+        <h1 class="head-text" id="color-head-text"></h1>
+        <div width="100%" style="text-align:center">
+            <svg id="svg-question-c" height="200" width="300">
+            </svg>
+        </div>
+        <p class="answers-c" id="c_answer_1" onclick="bloop.play()"></p>
+        <p class="answers-c" id="c_answer_2" onclick="bloop.play()"></p>
+        <p class="answers-c" id="c_answer_3" onclick="bloop.play()"></p>
+        <p class="answers-c" id="c_answer_4" onclick="bloop.play()"></p>
+        <p class="answers-c" id="c_answer_5" onclick="bloop.play()"></p>
+        <p class="answers-c" id="c_answer_6" onclick="bloop.play()"></p>
+        <p class="answers-c" id="c_answer_7" onclick="bloop.play()"></p>
+        <p class="answers-c" id="c_answer_8" onclick="bloop.play()"></p>
+        <p class="answers-c" id="c_answer_9" onclick="bloop.play()"></p>
+        <p class="answers-c" id="c_answer_10" onclick="bloop.play()"></p>
+        <p class="answers-c" id="c_answer_11" onclick="bloop.play()"></p>
+          <div class="tool_buttons_container">
+            <a href="#settings-screen" data-transition="none">
+                <img src="img/settings_icon.png" id="settings" class="tool_buttons" alt="settingsicon" height="50" width="50" onclick="clicky.play()">
+            </a>
+            <a href="#test-intro-screen" data-transition="none">
+                <img src="img/back_arrow.png" id="back" class="tool_buttons" alt="backicon" height="50" width="50" onclick="clicky.play()">
+            </a>
+            <a href="#test-colors-screen-popup" data-rel="popup" data-transition="none">
+                <img src="img/information_icon.png" class="tool_buttons" id="info" alt="infoicon" height="50" width="50" onclick="clicky.play()">
+            </a>
+            
+       </div>
+      <div data-role="popup" id="test-colors-screen-popup" class="ui-content" data-transition="slidedown" data-position-to="window">
+        <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn ui-icon-delete ui-btn-icon-notext ui-btn-right" onclick="clicky.play()">Close</a>
+        <form method="post" action="/action_page_post.php">
+          <p style="font-family: DK Cool Crayon;">Click the color name you think you see on the screen and we'll let you know if you're right!</p>
+        </form>
+      </div>
+      </div>    
+    </div>  
+    <!--TEST SHAPES SCREEN-->
+    <div data-role="page" id="test-shapes-screen">
+      <div data-role="main" class="background-format-2" id="test-shapes-main">
+        <h1 class="head-text" id="shape-head-text"></h1>
+        <div width="100%" style="text-align:center">
+            <svg id="svg-question-s" height="200" width="300">
+            </svg>
+        </div>
+        <div class="answers-container-s">  
+            <p class="answers-s" id="s_answer_1" onclick="bloop.play()"></p>
+            <p class="answers-s" id="s_answer_2" onclick="bloop.play()"></p>
+            <p class="answers-s" id="s_answer_3" onclick="bloop.play()"></p>
+            <p class="answers-s" id="s_answer_4" onclick="bloop.play()"></p>
+        </div>
+          <div class="tool_buttons_container">
+            <a href="#settings-screen" data-transition="none">
+                <img src="img/settings_icon.png" id="settings" class="tool_buttons" alt="settingsicon" height="50" width="50" onclick="clicky.play()">
+            </a>
+            <a href="#test-intro-screen" data-transition="none">
+                <img src="img/back_arrow.png" id="back" class="tool_buttons" alt="backicon" height="50" width="50" onclick="clicky.play()">
+            </a>
+            <a href="#test-shapes-screen-popup" data-rel="popup" data-transition="none">
+                <img src="img/information_icon.png" class="tool_buttons" id="info" alt="infoicon" height="50" width="50" onclick="clicky.play()">
+            </a>
+            
+       </div>
+      <div data-role="popup" id="test-shapes-screen-popup" class="ui-content" data-transition="slidedown" data-position-to="window">
+        <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn ui-icon-delete ui-btn-icon-notext ui-btn-right" onclick="clicky.play()" >Close</a>
+        <form method="post" action="/action_page_post.php">
+          <p style="font-family: DK Cool Crayon;">Click the shape name you think you see on the screen and we'll let you know if you're right!</p>
+        </form>
+      </div>
+      </div>    
+    </div>
+    <!-------------------------------------------------------------------------------------------->  
+    <!--TEST COMPONENTS END----------------------------------------------------------------------->
+    <!-------------------------------------------------------------------------------------------->
+      
+    
+      
+      
+      
+    <!-------------------------------------------------------------------------------------------->  
+    <!--PLAY COMPONENTS START--------------------------------------------------------------------->
+    <!-------------------------------------------------------------------------------------------->
+    <div data-role="page" id="play-screen">
+      <div data-role="main" class="background-format-2" id="play-main">
+        <h1 class="head-text">Use the tools below to Draw!</h1>
+        <div id="canvas-container">
+            <canvas id="myCanvas">
+        </canvas>
+        </div>  
+        <form method="post" action="/action_page_post.php" style="text-align:center">
+            <fieldset data-role="controlgroup" data-type="horizontal">
+                <label for="Triangle">
+                    <svg height="30" width="40">
+                        <polygon id="triangle-fill" points="5,30 35,30 20,5" style="stroke:black;stroke-width:1" />
+                    </svg>
+                </label>
+                <input type="radio" name="shape" id="Triangle" value="Triangle" onclick="clicky.play()">
+                <label for="Circle">
+                    <svg height="30" width="40">
+                        <circle id="circle-fill" cx="20" cy="15" r="12" stroke="black" stroke-width="1"/>
+                    </svg>
+                </label>
+                <input type="radio" name="shape" id="Circle" value="Circle" onclick="clicky.play()" checked>
+                <label for="Square">
+                    <svg height="30" width="40">
+                        <rect id="square-fill" width="20" height="20" x="10" y="5" style="stroke-width:1;stroke:black"/>
+                    </svg>
+                </label>
+                <input type="radio" name="shape" id="Square" value="Square" onclick="clicky.play()">
+                <label for="Rectangle">
+                    <svg height="30" width="40">
+                        <rect id="rect-fill" width="40" height="20" x="0" y="5" style="stroke-width:1;stroke:black"/>
+                    </svg>
+                </label>
+                <input type="radio" name="shape" id="Rectangle" value="Rectangle" onclick="clicky.play()">
+            </fieldset>
+            
+            
+            <fieldset data-role="controlgroup" data-type="horizontal">
+                <label for="Big" style="font-family:DK Cool Crayon;">Big</label>
+                <input type="radio" name="size" id="Big" value="60" onclick="clicky.play()">
+                <label for="Medium" style="font-family:DK Cool Crayon;">Medium</label>
+                <input type="radio" name="size" id="Medium" value="40" onclick="clicky.play()">
+                <label for="Small" style="font-family:DK Cool Crayon;">Small</label>
+                <input type="radio" name="size" id="Small" value="20" onclick="clicky.play()" checked>
+            </fieldset>   
+            
+            
+            <fieldset data-role="controlgroup" data-type="horizontal">
+                
+                <label for="Red" style="background-color:Red"></label>
+                <input type="radio" name="color" id="Red" value="Red" onclick="clicky.play()">
+                <label for="Green" style="background-color:Green"></label>
+                <input type="radio" name="color" id="Green" value="Green" onclick="clicky.play()" checked>
+                <label for="Blue" style="background-color:Blue"></label>
+                <input type="radio" name="color" id="Blue" value="Blue" onclick="clicky.play()">
+                <label for="Yellow" style="background-color:Yellow"></label>
+                <input type="radio" name="color" id="Yellow" value="Yellow" onclick="clicky.play()">
+                <label for="Orange" style="background-color:Orange"></label>
+                <input type="radio" name="color" id="Orange" value="Orange" onclick="clicky.play()">
+                <label for="Purple" style="background-color:Purple"></label>
+                <input type="radio" name="color" id="Purple" value="Purple" onclick="clicky.play()">
+                <label for="Brown" style="background-color:Brown"></label>
+                <input type="radio" name="color" id="Brown" value="Brown" onclick="clicky.play()">
+                <label for="Pink" style="background-color:Pink"></label>
+                <input type="radio" name="color" id="Pink" value="Pink" onclick="clicky.play()">
+                <label for="Black" style="background-color:Black"></label>
+                <input type="radio" name="color" id="Black" value="Black" onclick="clicky.play()">
+                <label for="White" style="background-color:White"></label>
+                <input type="radio" name="color" id="White" value="White" onclick="clicky.play()">
+                <label for="Gray" style="background-color:Gray"></label>
+                <input type="radio" name="color" id="Gray" value="Gray" onclick="clicky.play()">
+            </fieldset>
+            
+            <fieldset data-role="controlgroup" data-type="horizontal">
+               <button class="ui-btn" style="font-family:DK Cool Crayon;" onclick="draw();clicky.play()">Erase</button>
+            </fieldset>
+        </form>
+          <div class="tool_buttons_container">
+            <a href="#settings-screen" data-transition="none">
+                <img src="img/settings_icon.png" id="settings" class="tool_buttons" alt="settingsicon" height="50" width="50" onclick="clicky.play()">
+            </a>
+            <a href="#intro_screen" data-transition="none">
+                <img src="img/back_arrow.png" id="back" class="tool_buttons" alt="backicon" height="50" width="50" onclick="falseClickability();clicky.play()">
+            </a>
+            <a href="#play-screen-popup" data-rel="popup" data-transition="none">
+                <img src="img/information_icon.png" class="tool_buttons" id="info" alt="infoicon" height="50" width="50" onclick="clicky.play()">
+            </a>
+            
+       </div>
+      <div data-role="popup" id="play-screen-popup" class="ui-content" data-transition="slidedown" data-position-to="window">
+        <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn ui-icon-delete ui-btn-icon-notext ui-btn-right" onclick="clicky.play()">Close</a>
+        <form method="post" action="/action_page_post.php">
+          <p style="font-family: DK Cool Crayon;">Select a shape, size and color. Then tap on the white space to draw!</p>
+        </form>
+      </div>
+    </div>    
+    </div>
+    <!-------------------------------------------------------------------------------------------->  
+    <!--PLAY COMPONENTS END----------------------------------------------------------------------->
+    <!-------------------------------------------------------------------------------------------->  
+      
+      
+      
+    <!--SETTINGS SCREEN--> 
+    <div data-role="page" id="settings-screen" style="overflow:hidden">
+      <div data-role="main" class="background-format-2"> 
+          <div class="head-text-container">
+          <h1 class="head-text">Settings</h1>
+        </div>
+        <form method="post" class="volumes" action="/action_page_post.php">
+            <label for="theme_music" class="switch_style">Theme Music:</label>
+            <input type="checkbox" data-role="flipswitch" name="theme_music" id="theme_music" onchange="checkTheme()" checked>
+            <label for="click_sounds" class="switch_style">Clicks and Bloops:</label>
+            <input type="checkbox" data-role="flipswitch" name="click_sounds" id="click_sounds" onchange="checkClicks()" checked>
+        </form>
+        <div class="tool_buttons_container">
+            <a href="#intro_screen" data-transition="none">
+                <img src="img/back_arrow.png" id="back" class="tool_buttons" alt="backicon" height="50" width="50" onclick="clicky.play()">
+            </a>
+            <a href="#info-screen-popup" data-rel="popup" data-transition="none">
+                <img src="img/information_icon.png" class="tool_buttons" id="info" alt="infoicon" height="50" width="50" onclick="clicky.play()">
+            </a>
+            
+       </div>
+      </div>
+      <div data-role="popup" id="info-screen-popup" class="ui-content" data-transition="slidedown" data-position-to="window">
+        <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn ui-icon-delete ui-btn-icon-notext ui-btn-right" onclick="clicky.play()">Close</a>
+        <form method="post" action="/action_page_post.php">
+          <p style="font-family: DK Cool Crayon;" onclick="click.play()">Choose Whether you'd like to learn, test your knowledge, or play to have some fun!</p>
+        </form>
+      </div>
+      
+    </div>  
+      
+      
+      
+      
+    
+    
+    <script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="js/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="js/slick-1.6.0/slick/slick.min.js"></script>
+
+    <script type="text/javascript">
+      $(document).ready(function(){
+        $('.svg-carousel').slick({
+        dots: false,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 1
+    });
+   });
+    </script>
+
+
+ </body>
+</html>

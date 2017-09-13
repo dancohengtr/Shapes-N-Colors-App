@@ -1,0 +1,415 @@
+/* Fonts from Google Fonts - more at https://fonts.google.com */
+/*html, body {margin: 0; height: 100%; overflow: hidden}*/
+@font-face {
+  font-family: DK Cool Crayon;
+  src: url(../fonts/DK%20Cool%20Crayon.ttf);
+}
+
+
+body, html { height: 100%; margin: 0; padding: 0; }
+
+.background-format{
+  height: 100%;
+  width: 100%;
+  background: url(../img/mainScreen.jpg) no-repeat center center fixed; 
+  -webkit-background-size: 100% 100%;
+  -moz-background-size: 100% 100%;
+  -o-background-size: 100% 100%;
+  background-size: 100% 100%; 
+  margin: 0;
+  overflow: hidden;
+}
+
+
+.background-format-2{
+  height: 100%;
+  width: 100%;
+  background: url(../img/generalBackground.jpg) no-repeat center center fixed; 
+  -webkit-background-size: 100% 100%;
+  -moz-background-size: 100% 100%;
+  -o-background-size: 100% 100%;
+  background-size: 100% 100%; 
+  margin: 0;
+  overflow: hidden;
+}
+
+
+.head-text-container{
+  height: 10px;
+  width: 60%;
+  padding-right: 20%;
+  float: right;
+  /*text-align: center;*/
+}
+
+
+.head-text{ 
+  margin-top: 0px;
+  margin-bottom: 5%;    
+      
+  font-family: DK Cool Crayon;
+  font-size: 25px;
+  text-shadow: 2px 2px 16px #000000;
+  color: white;
+  text-align: center;
+     /* Chrome, Safari, Opera */
+  -webkit-animation: rainbow 1s infinite; 
+  
+  /* Internet Explorer */
+  -ms-animation: rainbow 1s infinite;
+  
+  /* Standar Syntax */
+  animation: rainbow 1s infinite;
+}
+
+
+
+.ui-slider-input {
+    display : none !important;
+}
+
+.ui-page{
+    height: 100%;
+}
+
+
+
+.button_container{
+  height: 100%;
+  width: 60%;
+  float: right;
+  padding-top: 60%;
+  padding-right: 20%;
+}
+
+
+
+.main_screen_buttons{
+  background-color: #4CAF50;
+  border: none;
+  padding: 15px 32px;
+  color: white;
+  /*position: relative;*/
+  text-decoration: none;
+  border-radius: 20px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  font-size: 25px;
+  font-family: "DK Cool Crayon", sans-serif;
+  margin-bottom: 45px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.main_screen_buttons:nth-child(3){
+  margin-bottom: 0px;
+}
+.main_screen_buttons:hover{background-color: #3e8e41}
+.main_screen_buttons:active{
+  background-color: #3e8e41;
+  box-shadow: 0 5px 30px  #ffffff;
+  transform: translateY(4px);
+  -webkit-transform: translateY(4px);
+  -moz-transform: translateY(4px);
+  -o-transform: translateY(4px);
+}
+
+
+#info_background{
+  background-color: #4CAF50;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #4CAF50;
+}
+#info_background:hover{background-color: #3e8e41;}
+#info_background:active{
+  background-color: #3e8e41;
+  box-shadow: 0 5px 30px  #ffffff;
+  transform: translateY(4px);
+  -webkit-transform: translateY(4px);
+  -moz-transform: translateY(4px);
+  -o-transform: translateY(4px);
+}
+
+
+
+
+#volume_background{
+  background-color: #4CAF50;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #4CAF50;
+  margin-left: 20%;
+  margin-right: 20%;
+}
+#volume_background:hover{background-color: #3e8e41;}
+#volume_background:active{
+  background-color: #3e8e41;
+  box-shadow: 0 5px 30px  #ffffff;
+  transform: translateY(4px);
+  -webkit-transform: translateY(4px);
+  -moz-transform: translateY(4px);
+  -o-transform: translateY(4px);
+}
+
+
+
+
+#home_background{
+  background-color: #4CAF50;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #4CAF50;
+}
+#home_background:hover{background-color: #3e8e41;}
+#home_background:active{
+  background-color: #3e8e41;
+  box-shadow: 0 5px 30px  #ffffff;
+  transform: translateY(4px);
+  -webkit-transform: translateY(4px);
+  -moz-transform: translateY(4px);
+  -o-transform: translateY(4px);
+}
+
+
+
+
+#footer_style{text-align: center;background-color: #4CAF50;overflow: hidden;}
+
+
+
+
+
+.svg-carousel-spacing{
+ height: 150px;
+ width: 100%;
+}
+.svg-text{
+  font-family: DK Cool Crayon;
+  font-size: 35px; 
+  text-shadow: 2px 2px 16px #000000;
+}
+
+
+
+
+#back-arrow{
+    height: 100%;
+    width: 100%;
+    background-image: url(../img/hand-drawn-arrow-4.png);
+    background-color: #4CAF50;
+    background-size: 100% 100%;
+    background-position: left;
+    border-radius: 20px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    padding: 20px;
+    cursor: pointer;
+    -moz-transform: scaleX(-1);
+        -o-transform: scaleX(-1);
+        -webkit-transform: scaleX(-1);
+        transform: scaleX(-1);
+        filter: FlipH;
+        -ms-filter: "FlipH";
+    
+}
+#back-arrow:hover{background-color: #3e8e41}
+#back-arrow:active{
+  background-color: #3e8e41;
+  box-shadow: 0 5px 30px  #ffffff;
+  transform: translateY(4px);
+  -webkit-transform: translateY(4px);
+  -moz-transform: translateY(4px);
+  -o-transform: translateY(4px);
+     
+        
+}
+
+
+
+.color-info-text{
+  font-family: DK Cool Crayon;
+  font-size: 13px;
+  text-shadow: 2px 2px 16px #000000;
+  color: white;
+  text-align: left;
+  display: inline;    
+    
+}
+
+
+.answers-c{
+  margin-bottom: 0px;
+  margin-right: 0px; 
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 20px 32px;
+  text-decoration: none;
+  border-radius: 20px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  font-size: 15px;
+  font-family: "DK Cool Crayon", sans-serif;
+  align-content: center;   
+  cursor: pointer;
+  display: inline-block;    
+}
+.answers-c:hover{background-color: #3e8e41}
+.answers-c:active{
+  background-color: #3e8e41;
+  box-shadow: 0 5px 30px  #ffffff;
+  transform: translateY(4px);
+  -webkit-transform: translateY(4px);
+  -moz-transform: translateY(4px);
+  -o-transform: translateY(4px);
+}
+
+
+
+.answers-container-s{
+  position: relative;    
+  top: 10px;   
+  height: 100px;
+  width: 60%;
+  float: right;
+  padding-right: 20%;
+}
+
+.answers-s{
+  
+  background-color: #4CAF50;    
+  border: none;
+  color: white;
+  padding: 20px 32px;
+  text-decoration: none;
+  border-radius: 20px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  font-size: 15px;
+  font-family: "DK Cool Crayon", sans-serif; 
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.answers-s:hover{background-color: #3e8e41}
+.answers-s:active{
+  background-color: #3e8e41;
+  box-shadow: 0 5px 30px  #ffffff;
+  transform: translateY(4px);
+  -webkit-transform: translateY(4px);
+  -moz-transform: translateY(4px);
+  -o-transform: translateY(4px);
+}
+
+
+.size-format{
+  font-family: "DK Cool Crayon", sans-serif; 
+  font-size: 25px;
+  text-shadow: 2px 2px 16px #000000;
+  color: white;        
+}
+
+#Triangle{
+    background-color: #4CAF50;    
+}
+
+canvas {
+    border: 3px solid #4CAF50;
+}
+
+
+
+
+
+
+
+
+.tool_buttons_container{
+    height: 70px;
+    width: 100%;
+    position: absolute;
+    top: 85%;
+    text-align: center;
+}
+.tool_buttons{
+    text-decoration: none;
+   display: inline;
+    padding: 10px 10px;
+    border-radius: 20px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    background-color: #4CAF50;
+    cursor: pointer;
+}
+.tool_buttons:hover{background-color: #3e8e41}
+.tool_buttons:active{
+  background-color: #3e8e41;
+  box-shadow: 0 5px 30px  #ffffff;
+  transform: translateY(4px);
+  -webkit-transform: translateY(4px);
+  -moz-transform: translateY(4px);
+  -o-transform: translateY(4px);
+}
+
+
+
+
+.volumes{
+    text-align: center;
+    padding-top: 50%;
+}
+.switch_style{
+    color: white;
+    font-family: "DK Cool Crayon", sans-serif;
+    font-size: 40px;
+    font-weight: 100;
+}
+
+
+
+.loader {
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #4CAF50;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes rainbow{
+	20%{color: red;}
+	40%{color: yellow;}
+	60%{color: green;}
+	80%{color: blue;}
+	100%{color: orange;}	
+}
+/* Internet Explorer */
+@-ms-keyframes rainbow{
+	20%{color: red;}
+	40%{color: yellow;}
+	60%{color: green;}
+	80%{color: blue;}
+	100%{color: orange;}	
+}
+
+/* Standar Syntax */
+@keyframes rainbow{
+	20%{color: red;}
+	40%{color: yellow;}
+	60%{color: green;}
+	80%{color: blue;}
+	100%{color: orange;}	
+}
+
+
+
